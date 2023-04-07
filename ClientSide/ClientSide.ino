@@ -13,6 +13,9 @@ DHT dht(DHT_PIN_DATA, DHT11);
 
 int minutes_between = 1;  
 
+char[] server_ip = "10.0.0.13"
+char[] server_port = "8080"
+
 void setup() {
   Serial.begin(115200);
   dht.begin();
@@ -40,7 +43,7 @@ void sendData(String data){
   tone(BUZZER_PIN, NOTE_G4, 15);
 
   // Send HTTP POST request
-  espSerial.println("AT+CIPSTART=\"TCP\",\"10.0.0.133\",8080");
+  espSerial.println("AT+CIPSTART=\"TCP\",\"" + server_ip + "\"," + server_port);
   // digitalWrite(buzzerPin, LOW);
   delay(15);
 
@@ -51,7 +54,7 @@ void sendData(String data){
   
   delay(15);
   espSerial.println("POST /data HTTP/1.1");
-  espSerial.println("Host: 10.0.0.133:8080");
+  espSerial.println("Host: " + server_ip + ":" + server_port);
   espSerial.println("Connection: keep-alive");
   espSerial.println("Content-Type: text/plain");
   espSerial.println("Content-Length: " + String(data.length()));
