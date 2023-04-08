@@ -4,7 +4,7 @@ Garod is an automated gardening tool that monitors various parameters of plants'
 ## Getting Started
 ### Prerequisites
 
-### Arduino Uno board
+- Arduino Uno board
 - ESP-01 Wi-Fi module
 - LDR module
 - Soil moisture module
