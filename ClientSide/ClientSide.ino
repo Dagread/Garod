@@ -13,8 +13,8 @@ DHT dht(DHT_PIN_DATA, DHT11);
 
 int minutes_between = 1;  
 
-char[] server_ip = "10.0.0.13"
-char[] server_port = "8080"
+char[] server_ip = "<your_ip>"
+char[] server_port = "<your_port>"
 
 void setup() {
   Serial.begin(115200);
