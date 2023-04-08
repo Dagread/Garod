@@ -14,11 +14,14 @@ Garod is an automated gardening tool that monitors various parameters of plants'
 ### Installing
 
 1. Clone the repository: `git clone https://github.com/Dagread/Garod.git`
-2. Connect the components according to the circuit diagram (GarodScheme.png)
+2. Connect the components according to the circuit diagram below(GarodScheme.png)
 3. In `char[] server_ip = "<your_ip>"` and `char[] server_port = "<your_port>"` replace `<your_ip>` and `<your_port>` with IP-adress and port of server that runs `Garod_Server.go`
 4. Connect your ESP-01 Wi-Fi module to you Wi-Fi network
 5. Upload the `Garod_Client.ino` sketch to the Arduino Uno board
 6. Run the `Garod_Server.go` script on the server using Golang: `go run Garod_Server.go`
+
+#### Circuit Diagram
+![circuit diagram](https://github.com/Dagread/Garod/blob/main/Scheme/GarodScheme.png?raw=true)
 
 ### Usage
 
